@@ -1,0 +1,21 @@
+name: Warner Music
+location: Kuala Lumpur
+startYear: 2019
+roles:
+  Regional Analyst Programmer:
+    position: Regional Analyst Programmer
+    start: Feb 2019
+    end: Aug 2019
+    blurb: ""
+    achievements: ""
+    bullets:
+      - UI/UX Developer adept at translating system requirements into Sketch software prototypes.
+      - Executed frontend development for APAC region projects, aligning with approved prototypes and backend requirements.
+      - Collaborated within a diverse global team, comprising members from India, Japan, and the US.
+    technologies: 
+      - Sketch
+      - Angular
+      - Photoshop
+      - HTML/CSS
+      - JavaScript
+      - SQL

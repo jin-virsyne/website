@@ -1,0 +1,20 @@
+name: Appstream
+location: Selangor
+startYear: 2016
+roles:
+  Web Developer:
+    position: Web Developer
+    start: Oct 2016
+    end: Jan 2019
+    blurb: ""
+    achievements: ""
+    bullets:
+      - Spearheaded GUI revitalization or implementation for existing and new websites, enhancing user experience.
+      - Designed and developed dynamic frontend web pages.
+      - Solo engineered a property rental management system, encompassing frontend, backend, and database architecture.
+    technologies: 
+      - ASP.NET MVC
+      - C#
+      - HTML/CSS
+      - JavaScript
+      - MySQL

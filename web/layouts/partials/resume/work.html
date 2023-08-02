@@ -1,0 +1,43 @@
+<section class="resume-section experience-section mb-5">
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
+    <div class="resume-section-content">
+        <div class="resume-timeline position-relative">
+            {{ $list := sort .Site.Data.resume.employers "startYear" "desc" }}
+            {{ $len := (len $list) }}
+            {{ range $index, $element := $list }}
+            {{ if eq (add $index 1) $len }}
+            <article class="resume-timeline-item position-relative">
+            {{ else }}
+            <article class="resume-timeline-item position-relative pb-5">
+            {{ end }}
+                <div class="resume-company-name">{{ .name }}, {{ .location }}</div>
+                {{ range .roles }}
+                <div class="resume-timeline-item-header mb-2">
+                    <div class="d-flex flex-column flex-md-row">
+                        <h3 class="resume-position-title font-weight-bold mb-1">{{ .position }}</h3>
+                        <div class="resume-position-time ms-auto">{{ .start }} {{ with .end }}- {{ . }} {{ end }}</div>
+                    </div><!--//row-->
+                </div><!--//resume-timeline-item-header-->
+                <div class="resume-timeline-item-desc">
+                    {{ with .blurb }}<p>{{ . }}</p>{{ end }}
+                    {{ with .achievement }}
+                    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
+                    <p>{{ . }}</p>
+                    {{ end }}
+                    <ul>
+                        {{ range .bullets }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    <ul class="list-inline">
+                        {{ range sort .technologies}} 
+                        <li class="list-inline-item"><span class="badge bg-secondary badge-pill">{{ . }}</span></li>
+                        {{ end }}
+                    </ul>
+                </div><!--//resume-timeline-item-desc-->
+                {{ end }}
+            </article><!--//resume-timeline-item-->
+            {{ end }}
+        </div><!--//resume-timeline-->
+    </div>
+</section><!--//experience-section-->
