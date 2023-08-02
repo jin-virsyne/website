@@ -1,0 +1,66 @@
+name: Build website to container
+
+on:
+  push:
+    branches:
+      - main
+      - resume
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  CONTAINER_IMAGE: app
+  CONTAINER_REPO: ${{ github.repository }}
+  HUGO_VERSION: 0.115.4
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build with Hugo
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          chmod +x bin/build
+          ./bin/build --baseURL "http://localhost/"          
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.CONTAINER_REPO }}/${{ env.CONTAINER_IMAGE }}
+
+      - name: Build and publish Docker container
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}  
