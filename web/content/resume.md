@@ -1,5 +1,5 @@
-+++
-title = "Resume"
-layout = "resume"
-type = "resume"
-+++
+---
+title: Resume
+layout: resume
+type: resume
+---

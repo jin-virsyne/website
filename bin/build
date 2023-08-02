@@ -43,4 +43,4 @@ if ! check_hugo_version; then
 fi
 
 cd ${ROOT_DIR}/web
-hugo "$@" --minify --destination "${ROOT_DIR}/public"
+hugo "$@"

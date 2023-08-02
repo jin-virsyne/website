@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Hugo Version
-HUGO_VERSION="0.115.4"
+HUGO_VERSION="0.116.1"

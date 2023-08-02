@@ -1,19 +1,21 @@
 # Page settings
 
-baseURL = "./"
+relativeURLs = true
 languageCode = "en-us"
 title = 'My New Hugo Site'
 
+publishDir = "../public"
+
 # Do not build files for websites. Need them? Set to false
 disableRSS = true
-disableSitemap = true
-disable404 = true
+# disableSitemap = true
+# disable404 = true
 
 [params]
 
 # Meta
-    description = "Resume"
-    author = "Jin Chan"
+description = "Resume"
+author = "Jin Chan"
 
 # Theme styles (1 ~ 6)
-    styles = "6"
+styles = "6"

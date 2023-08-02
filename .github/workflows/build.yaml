@@ -4,14 +4,13 @@ on:
   push:
     branches:
       - main
-      - resume
-  workflow_dispatch:
+  pull_request:
 
 env:
   REGISTRY: ghcr.io
   CONTAINER_IMAGE: app
   CONTAINER_REPO: ${{ github.repository }}
-  HUGO_VERSION: 0.115.4
+  HUGO_VERSION: 0.116.1
 
 # Default to bash
 defaults:
@@ -21,7 +20,7 @@ defaults:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: read
       packages: write
@@ -29,8 +28,8 @@ jobs:
     steps:
       - name: Install Hugo CLI
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -40,9 +39,7 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: |
-          chmod +x bin/build
-          ./bin/build --baseURL "http://localhost/"          
+        run: bin/build
 
       - name: Log in to the Container registry
         uses: docker/login-action@v2
@@ -63,4 +60,4 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}  
+          labels: ${{ steps.meta.outputs.labels }}
