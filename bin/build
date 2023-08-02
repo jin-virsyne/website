@@ -1,0 +1,46 @@
+#!/bin/bash
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+BIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source "${BIN_DIR}/build_config"
+
+REQUIRED_COMMANDS=(
+	"hugo" )
+
+function check_hugo_version {
+	version_string=$(hugo version)
+	version_string=$(echo "$version_string" | grep -o -E 'v[0-9]+\.[0-9]+\.[0-9]+' | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
+
+	if [ "${version_string}" != "${HUGO_VERSION}" ]; then
+		echo "Hugo is v${version_string} but we expected v${HUGO_VERSION}."
+		return  1
+	fi
+
+	return 0
+}
+
+function command_exists {
+	cmd="${1}"
+	if type "${cmd}" > /dev/null 2>&1; then
+		return 0
+	else
+		return 1
+	fi
+}
+
+# Check for Required Functions
+for cmd in "${REQUIRED_COMMANDS[@]}"; do
+	if ! command_exists $cmd; then
+		echo "Missing command ${cmd}. Terminating job."
+		exit 1
+	fi
+done
+
+# Check Hugo Version
+if ! check_hugo_version; then
+	exit 1
+fi
+
+cd ${ROOT_DIR}/web
+hugo "$@" --minify --destination "${ROOT_DIR}/public"
