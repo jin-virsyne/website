@@ -1,0 +1,14 @@
+<section class="resume-section education-section mb-5">
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
+    <div class="resume-section-content">
+        <ul class="list-unstyled">
+            {{ range sort .Site.Data.resume.index.education "start" "desc" }}
+            <li class="mb-2">
+                <div class="resume-degree font-weight-bold">{{ .degree }}</div>
+                <div class="resume-degree-org">{{ .school }}</div>
+                <div class="resume-degree-time">{{ .start }} - {{ .end }}</div>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</section><!--//education-section-->

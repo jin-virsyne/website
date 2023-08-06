@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+IMAGE="www"
+REPO="ghcr.io/jin-virsyne/${IMAGE}"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+export TAG=$(date "+%Y.%m.%d-%H.%M.%S")
+echo "Release TAG: ${TAG}"
+
+pushd ${ROOT_DIR}/web
+hugo "$@"
+popd
+
+# Build
+docker build . --tag ${IMAGE} --build-arg BUILD_TAG="$TAG"
+
+# Ship it!
+docker tag ${IMAGE} ${REPO}/${IMAGE}:${TAG}
+docker tag ${IMAGE} ${REPO}/${IMAGE}:latest
+docker push ${REPO}/${IMAGE}:${TAG}
+docker push ${REPO}/${IMAGE}:latest

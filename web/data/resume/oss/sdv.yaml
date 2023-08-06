@@ -1,0 +1,8 @@
+name: Stardew Valley Mods
+type: Private
+url: #
+blurb: Mainly in charge of the building of custom maps along with its logic like weather system and randomized maze. Planned and created unique NPCs (non-player character), developing their movements and crafting their sprites from scratch. Also translated new NPCs' dialogues from Mandarin to English.
+technologies: 
+  - Tiled
+  - SMAPI
+  - Photoshop

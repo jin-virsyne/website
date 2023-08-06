@@ -1,0 +1,7 @@
+name: Arknights Toolbox
+type: Open Source
+url: //github.com/jin-virsyne/arknights-toolbox
+blurb: A versatile toolbox that computes materials and optimal farming routes. Initially derived from [aktools](https://github.com/gneko/aktools) with the author's consent, I subsequently adapted it to cater to Arknights Global server.
+technologies: 
+  - Python
+  - HTML/CSS

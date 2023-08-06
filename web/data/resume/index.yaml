@@ -1,0 +1,64 @@
+name: Jin Chan
+tagline: Software Engineer
+avatar: ""
+location: Kuala Lumpur
+contact:
+  email: 
+    label: jin@virsyne.com
+    url: mailto:jin@virsyne.com
+  phone: 
+    label: 60 122 918 788
+    url: tel:+60122918788
+  linkedin: 
+    label: linkedin.com/in/jinzen
+    url: //linkedin.com/in/jinzen
+  github: 
+    label: github.com/jin-virsyne
+    url: //github.com/jin-virsyne
+  website: 
+    label: virsyne.com
+    url: //virsyne.com
+summary: 
+  - Adaptable professional rejoining the job market after upskilling in Kubernetes, DevOps, AWS/GCE, and other technologies. Enthusiastic about diving into AI/ML projects and contributing to the next-gen software revolution.
+skills:
+  main:
+    Angular: 35%
+    ASP.NET: 65%
+    C#: 80%
+    Kubernetes: 30%
+    Django: 40%
+    HTML/CSS: 95%
+    Litestar: 25%
+    JavaScript: 90%
+    Hugo: 60%
+    Python: 70%
+    SQL: 75%
+  sub:
+    - Tiled
+    - Photoshop
+    - Sketch
+    - Lightroom
+    - DevOps
+    - Git
+    - WordPress
+    - Unit Testing
+education:
+  - degree: BSc Hons Software Engineering
+    school: Nottingham Trent University
+    start: 2010
+    end: 2013
+  - degree: Diploma in Computer Studies
+    school: NCC Education
+    start: 2009
+    end: 2010
+languages:
+  - name: Mandarin
+    level: Native
+  - name: English
+    level: Professional
+  - name: Malay
+    level: Competent
+  - name: Cantonese 
+    level: Conversational
+  - name: Hakka
+    level: Conversational

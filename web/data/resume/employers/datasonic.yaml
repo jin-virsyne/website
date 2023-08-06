@@ -1,0 +1,26 @@
+name: Datasonic Smart Solutions
+location: Putrajaya
+startYear: 2013
+roles:
+  Software Engineer:
+    position: Software Engineer
+    start: Aug 2013
+    end: Sep 2016
+    blurb: ""
+    achievements: ""
+    bullets:
+      - Designed GUI and implemented frontend templates for diverse systems and projects.
+      - Executed backend API development and database table implementation.
+      - Contributed to manufacturing & inventory management projects for MyKad (Malaysian Identity Card) and Malaysian Passport.
+    technologies: 
+      - ASP.NET Razor
+      - Crystal Report
+      - C#
+      - Photoshop
+      - HTML/CSS
+      - JavaScript
+      - MS SQL
+      - WPF
+      - Windows Form
+      - Angular
+
