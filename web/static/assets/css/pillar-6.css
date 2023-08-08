@@ -11757,6 +11757,27 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
   background-color: #80425F;
 }
 
+.social-list {
+  display: flex;
+}
+.social-list a {
+  width: 36px;
+  height: 36px;
+  padding-top: 7px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+}
+.social-list a:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .social-list a:hover {
+      transition: none;
+  }
+}
+
 .resume-wrapper {
   padding-top: 30px;
   padding-bottom: 60px;
