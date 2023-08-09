@@ -19,3 +19,16 @@ author = "Jin Chan"
 
 # Theme styles (1 ~ 6)
 styles = "6"
+
+[menu]
+    [[menu.nav]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+    [[menu.nav]]
+    identifier = "resume"
+    name = "Resume"
+    url = "/resume/"
+    weight = 2
