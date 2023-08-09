@@ -1,0 +1,50 @@
+<section class="elementor-section elementor-top-section elementor-element elementor-element-4616d8f op-section elementor-section-boxed" id="experience">
+    <div class="elementor-container elementor-column-gap-no">
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-5cf8d351 cocobasic-column-align">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-1ff21d9b elementor-widget elementor-widget-heading">
+                    <div class="elementor-widget-container">
+                        <h2 class="elementor-heading-title elementor-size-default">Experience</h2>
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-705ff71b cocobasic-left-rigt elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-image">
+                    <div class="elementor-widget-container">
+                        <img decoding="async" width="214" height="164" src="/assets/images/triangle.png" class="attachment-full size-full wp-image-526" alt="" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-e90c515">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-a0a3b5b elementor-widget elementor-widget-text-editor">
+                    <div class="elementor-widget-container">
+                        {{ $list := sort .Site.Data.resume.employers "startYear" "desc" }}
+                        {{ range $index, $element := $list }}
+                        <article class="resume-company">
+                            <div class="resume-company-name">{{ .name }}, {{ .location }}</div>
+                            {{ range .roles }}
+                            <div class="resume-position-title">{{ .position }}</div>
+                            <div class="resume-position-time">{{ .start }} {{ with .end }}- {{ . }} {{ end }}</div>
+                            <div class="resume-timeline-item-desc">
+                                {{ with .blurb }}<p>{{ . | markdownify }}</p>{{ end }}
+                                <ul>
+                                    {{ range .bullets }}
+                                    <li>{{ . }}</li>
+                                    {{ end }}
+                                </ul>
+                                <ul class="list-inline">
+                                    {{ range sort .technologies}} 
+                                    <li class="list-inline-item"><span class="badge badge-dark badge-pill">{{ . }}</span></li>
+                                    {{ end }}
+                                </ul>
+                            </div><!--//resume-timeline-item-desc-->
+                            {{ end }}
+                        </article>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -2,7 +2,7 @@
 
 relativeURLs = true
 languageCode = "en-us"
-title = 'My New Hugo Site'
+title = 'Jin Chan'
 
 publishDir = "../public"
 
@@ -17,18 +17,45 @@ disableRSS = true
 description = "Resume"
 author = "Jin Chan"
 
-# Theme styles (1 ~ 6)
-styles = "6"
-
 [menu]
     [[menu.nav]]
     identifier = "home"
     name = "Home"
-    url = "/"
+    url = "#home"
     weight = 1
 
     [[menu.nav]]
     identifier = "resume"
-    name = "Resume"
-    url = "/resume/"
+    name = "About"
+    url = "#about"
     weight = 2
+
+    [[menu.nav]]
+    identifier = "skills"
+    name = "Skills"
+    url = "#skills"
+    weight = 3
+
+    [[menu.nav]]
+    identifier = "experience"
+    name = "Experience"
+    url = "#experience"
+    weight = 4
+
+    [[menu.nav]]
+    identifier = "project"
+    name = "Projects"
+    url = "#project"
+    weight = 4
+
+    [[menu.nav]]
+    identifier = "education"
+    name = "Education"
+    url = "#education"
+    weight = 5
+
+    [[menu.nav]]
+    identifier = "contact"
+    name = "Contact"
+    url = "#contact"
+    weight = 6

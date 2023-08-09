@@ -1,84 +1,110 @@
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-  #hero {
+.skill {
     width: 100%;
-    height: 100vh;
-    background: url("../images/mascot.png") top right no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-  
-  @media (min-width: 992px) {
-    #hero {
-      padding-left: 160px;
-    }
-  }
-  
-  #hero:before {
-    content: "";
-    background: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  #hero h1 {
-    margin: 0;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #3d1f2d;
-  }
-  
-  #hero p {
-    color: #3d1f2d;
-    margin: 15px 0 0 0;
-    font-size: 26px;
-    text-transform: uppercase;
-  }
-  
-  #hero p span {
-    color: #80425F;
-    letter-spacing: 1px;
-  }
-  
-  #hero .social-links {
-    margin-top: 30px;
-  }
-  
-  #hero .social-links a {
-    font-size: 24px;
-    display: inline-block;
-    color: #3d1f2d;
-    line-height: 1;
-    margin-right: 20px;
-    transition: 0.3s;
-  }
+    height: 12px;
+    background-color: #fff;
+    position: relative
+}
 
-  #hero .social-links a:last-child {
-    margin-right: 0;
-  }
-  
-  #hero .social-links a:hover {
-    color: #80425F;
-  }
-  
-  @media (max-width: 992px) {
-    #hero {
-      text-align: center;
-    }
-  
-    #hero h1 {
-      font-size: 32px;
-      line-height: 36px;
-    }
-  
-    #hero p {
-      margin-top: 10px;
-      font-size: 20px;
-      line-height: 24px;
-    }
-  }
+.skill-header {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-inline-item {
+    display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.badge {
+    --bs-badge-padding-x: 0.65em;
+    --bs-badge-padding-y: 0.35em;
+    --bs-badge-font-size: 0.75em;
+    --bs-badge-font-weight: 700;
+    --bs-badge-color: #fff;
+    --bs-badge-border-radius: var(--bs-border-radius);
+    display: inline-block;
+    padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+    font-size: var(--bs-badge-font-size);
+    font-weight: var(--bs-badge-font-weight);
+    line-height: 1;
+    color: var(--bs-badge-color);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 3px;
+}
+
+.badge-light {
+    color: #188497;
+    background: #fff;
+}
+
+.badge-dark {
+    background-color: #188497;
+}
+
+.contact-head {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.resume-button {
+    color: #7a5932;
+    font-weight: 700;
+    border: 2px solid #7a5932;
+    text-align: center;
+    position: relative;
+    padding: 20px 0;
+    font-size: 18px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.resume-button:hover {
+    background-color: #7a5932;
+    color: #f0deca;
+}
+
+.resume-company {
+    padding-bottom: 3rem;
+}
+
+.resume-company-name {
+    font-weight: 500;
+}
+
+.resume-position-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.resume-position-time, .timeline-event-content span {
+    font-size: 0.875rem;
+}
+
+.resume-timeline-item-desc > p {
+    margin-bottom: 1em;
+}
+
+.timeline-event-content .timeline-school {
+    line-height: 1.5rem;
+}

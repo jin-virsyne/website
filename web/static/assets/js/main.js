@@ -14,14 +14,7 @@
     }
 
     /**
-     * Let Hero height be dynamic
-     */
-    window.addEventListener('load', function() {
-      
-    });
-
-    /**
-     * Hero type effect
+     * Type effect
      */
     const typed = select('.typed')
         if (typed) {
@@ -37,17 +30,4 @@
                 loop: true
         });
     }
-
-    /**
-     * Animation on scroll
-     */
-    window.addEventListener('load', () => {
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        })
-    });
-
 })()

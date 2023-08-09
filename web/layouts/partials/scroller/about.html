@@ -1,0 +1,41 @@
+<section class="elementor-section elementor-top-section elementor-element elementor-element-3c2f0808 op-section elementor-section-boxed" id="about">
+    <div class="elementor-container elementor-column-gap-no">
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4e2591d8 cocobasic-column-align">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-570ae41d elementor-widget elementor-widget-heading">
+                    <div class="elementor-widget-container">
+                        <h2 class="elementor-heading-title elementor-size-default">About<br>Me</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-1a7fbc57">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-35fa5410 elementor-widget elementor-widget-text-editor">
+                    <div class="elementor-widget-container">
+                        <p>{{ .Site.Data.resume.index.summaryHead }}</p>
+                    </div>
+                </div>
+                
+                <div class="elementor-element elementor-element-53601618 elementor-widget elementor-widget-text-editor">
+                    <div class="elementor-widget-container">
+                        {{ range .Site.Data.resume.index.summary }}
+                        <p>{{ . }}</p>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-53601618 elementor-widget elementor-widget-text-editor">
+                    <div class="elementor-widget-container">
+                        <div class="skill-header">Language</div>
+                        <ul class="list-unstyled resume-lang-list">
+                            {{ range .Site.Data.resume.index.languages }}
+                            <li class="mb-2"><span class="resume-lang-name font-weight-bold">{{ .name }}</span> <small class="text-muted font-weight-normal">({{ .level }})</small></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
