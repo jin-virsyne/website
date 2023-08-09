@@ -24485,8 +24485,8 @@ button.swiper-pagination-bullet {
     font-weight: 900;
     font-display: block;
     src: 
-        url(/assets/plugins/fontawesome/webfonts/fa-solid-900.woff2) format("woff2"), 
-        url(/assets/plugins/fontawesome/webfonts/fa-solid-900.ttf) format("truetype")
+        url(../plugins/fontawesome/webfonts/fa-solid-900.woff2) format("woff2"), 
+        url(../plugins/fontawesome/webfonts/fa-solid-900.ttf) format("truetype")
 }
 
 .fa,
@@ -24505,8 +24505,8 @@ button.swiper-pagination-bullet {
     font-weight: 400;
     font-display: block;
     src: 
-        url(/assets/plugins/fontawesome/webfonts/fa-brands-400.woff2) format("woff2"), 
-        url(/assets/plugins/fontawesome/webfonts/fa-brands-400.ttf) format("truetype")
+        url(../plugins/fontawesome/webfonts/fa-brands-400.woff2) format("woff2"), 
+        url(../plugins/fontawesome/webfonts/fa-brands-400.ttf) format("truetype")
 }
 
 .fab {
