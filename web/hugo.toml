@@ -2,7 +2,7 @@
 
 relativeURLs = true
 languageCode = "en-us"
-title = 'Jin Chan'
+title = 'Virsyne Website'
 
 publishDir = "../public"
 
