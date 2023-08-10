@@ -1,0 +1,43 @@
+<section class="elementor-section elementor-top-section elementor-element elementor-element-ed556fe op-section elementor-section-boxed" id="education">
+    <div class="elementor-container elementor-column-gap-no">
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-084f4de cocobasic-column-align">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-cfdb3c9 cocobasic-rotate elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-image">
+                    <div class="elementor-widget-container"> 
+                        <img decoding="async" width="220" height="220" src="/assets/images/square.png" class="attachment-full size-full wp-image-528" alt="" loading="lazy" sizes="(max-width: 220px) 100vw, 220px" />
+                    </div>
+                </div>
+                <div class="elementor-element elementor-element-be89dfd elementor-widget elementor-widget-heading">
+                    <div class="elementor-widget-container">
+                        <h2 class="elementor-heading-title elementor-size-default">Education</h2>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-483cd999">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-76b9110 elementor-widget elementor-widget-coco-timeline">
+                    <div class="elementor-widget-container">
+                        <ul class="timeline-holder">
+                            {{ range sort .Site.Data.resume.index.education "start" "desc" }}
+                            <li class="timeline-event">
+                                <span class="timeline-circle"></span>
+                                <div class="timeline-event-content">
+                                    <b>{{ .degree }}</b> <br> 
+                                    <div class="timeline-school">
+                                        {{ .school }}<br> 
+                                        <span class="timeline-span">{{ .start }} - {{ .end }}</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-event-date">{{ .end }}</div>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

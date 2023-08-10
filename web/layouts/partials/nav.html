@@ -1,39 +1,31 @@
-<header class="header">
-    <div class="top-bar theme-bg-primary-darken">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-dark position-relative">
-				{{ $currentPage := .currentPage }}
-                
-                <ul class="social-list list-inline mb-0">
-                    {{ if ne $currentPage "Home" }}
-                    <li class="list-inline-item"><a class="text-white" href="//linkedin.com/in/jinzen"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a class="text-white" href="//github.com/jin-virsyne"><i class="fab fa-github-alt fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a class="text-white" href="mailto:jin@virsyne.com"><i class="far fa-envelope fa-fw"></i></a></li>
-                    {{ end }}
-                </ul><!--//social-list-->
-                
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse text-uppercase" id="navigation">
-                    <ul class="navbar-nav ms-lg-auto">
-                        
+<header>
+    <div class="header-left-part">
+        <div class="toggle-holder">
+            <div id="toggle" class="">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="site-title"> <a href="/">{{ upper .Site.Data.resume.index.name }}</a></div>
+        <div class="menu-social">
+            <a href="{{ .Site.Data.resume.index.contact.linkedin.url }}" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a>
+            <a href="{{ .Site.Data.resume.index.contact.github.url }}" target="_blank"><i class="fab fa-github-alt fa-fw"></i></a>
+            <a href="{{ .Site.Data.resume.index.contact.email.url }}" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+        </div>
+    </div>
+    <div class="header-right-part">
+        <div class="menu-wrapper center-relative relative">
+            <div class="menu-holder">
+                <nav id="header-main-menu">
+                    <ul class="main-menu sm sm-clean">
                         {{ range site.Menus.nav }}
-                        {{ $name := .Name }}
-                        <li class="nav-item me-lg-3">
-                            {{ if eq $name $currentPage }}
-                            {{ $hasActive := true }}
-                            <a class="nav-link active" href="{{ .URL }}">{{ .Name }}  <span class="sr-only">(current)</span></a>
-                            {{ else }}
-                            <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
-                            {{ end }}
-                        </li>
-                        {{ end }}                        
+                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                        {{ end }}
                     </ul>
-                </div>
-
-            </nav>
-        </div><!--//container-->
-    </div><!--//top-bar-->
-</header><!--//header-->
+                </nav>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</header>

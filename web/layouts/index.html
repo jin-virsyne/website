@@ -1,21 +1,21 @@
 {{ define "main" }}
-<main aria-role="main">
-    {{ partial "nav.html" (dict "currentPage" "Home") }}
-    {{ $resume := .Site.Data.resume.index }}
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center">
-        <div class="container" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Jin Chan</h1>
-            <p>I Am <span class="typed" data-typed-items="A Developer, From Kuala Lumpur"></span></p>
-            <div class="social-links">
-                <a href="{{ $resume.contact.linkedin.url }}"><i class="fab fa-linkedin-in fa-fw"></i></a>
-                <a href="{{ $resume.contact.github.url }}"><i class="fab fa-github-alt fa-fw"></i></a>
-                <a href="{{ $resume.contact.website.url }}"><i class="far fa-envelope fa-fw"></i></a>
-            </div>
-            <div class="my-2 my-md-3">
-                <a class="btn btn-primary" href="/resume">Resume</a>
-            </div>
-        </div>
-    </section><!-- End Hero -->
-</main>
+{{ $resume := .Site.Data.resume.index }}
+{{ partial "nav.html" . }}
+
+<div class="one-page-content-wrapper">
+    <div class="elementor elementor-181 resume">
+        {{ partial "scroller/home.html" . }}
+
+        {{ partial "scroller/about.html" . }}
+
+        {{ partial "scroller/skill.html" . }}
+
+        {{ partial "scroller/experience.html" . }}
+        
+        {{ partial "scroller/project.html" . }}
+
+        {{ partial "scroller/education.html" . }}
+
+    </div>
+</div>
 {{ end }}

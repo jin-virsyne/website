@@ -1,0 +1,111 @@
+body .doc-loader {
+    background-color: #f0deca;
+}
+
+html body,
+body .header-left-part,
+body .menu-holder,
+body .sm-clean ul {
+    background-color: #faeddf;
+}
+
+html body,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body .blog-item-holder .entry-title a,
+body .nav-previous a,
+body .nav-next a,
+body #commentform #email,
+body #commentform #author,
+body #commentform #comment,
+body .form-submit input[type=submit],
+body .wpcf7-form input[type=text],
+body .wpcf7-form input[type=email],
+body .wpcf7-form textarea,
+body .wpcf7-form input[type=submit],
+body.search .nav-links a,
+body.archive .nav-links a,
+body .footer a,
+body select,
+body .search-field,
+body .elementor-element .elementor-widget-container .elementor-icon-wrapper a.elementor-icon {
+    color: #7a5932;
+}
+
+body .more-posts:before,
+body.single .nav-links:before,
+body .more-posts-portfolio:before,
+body .form-submit:before {
+    background-color: #7a5932;
+}
+
+body select,
+body .search-field:focus {
+    border-color: #7a5932;
+}
+
+body .search-field::-webkit-input-placeholder {
+    color: #7a5932;
+}
+
+body .search-field:-ms-input-placeholder {
+    color: #7a5932;
+}
+
+body .search-field::placeholder {
+    color: #7a5932;
+}
+
+html body a,
+html body a:hover,
+body .entry-info a,
+body .blog-item-holder .entry-title a:hover,
+body .error-text-404,
+body .footer a:hover,
+body .elementor-element .elementor-widget-container .elementor-icon-wrapper a.elementor-icon:hover,
+body .logged-in-as,
+body .form-submit input[type=submit]:hover {
+    color: #198597;
+}
+
+body .home-blog-list h4 a:hover {
+    color: #198597 !important;
+}
+
+body blockquote,
+body .archive-title {
+    background-color: #198597;
+}
+
+body .sm-clean a,
+body .menu-social,
+body .menu-social a,
+body .site-title {
+    color: #7a5932;
+}
+
+html body .site-title a {
+    color: #7a5932 !important;
+}
+
+body #toggle div {
+    background-color: #7a5932;
+}
+
+html body .sm-clean a:hover,
+html body .main-menu.sm-clean .sub-menu li a:hover,
+html body .sm-clean li.active a,
+html body .sm-clean li.current-page-ancestor>a,
+html body .sm-clean li.current_page_ancestor>a,
+html body .sm-clean li.current_page_item>a,
+body .menu-social a:hover {
+    color: #198597;
+}
+
+body.single-portfolio .content-holder {
+    background-color: #f0deca;
+}

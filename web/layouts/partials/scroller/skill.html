@@ -1,0 +1,57 @@
+<section class="elementor-section elementor-top-section elementor-element elementor-element-48198d00 op-section elementor-reverse-mobile elementor-section-boxed" id="skills">
+    <div class="elementor-container elementor-column-gap-no">
+        <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-67f9096e">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-51c9fb72 elementor-widget elementor-widget-coco-skills-lines">
+                    <div class="elementor-widget-container">
+                        <div class="skills-holder">
+                            {{ range $skill, $value := .Site.Data.resume.index.skills.main }}
+                            <div class="skill-holder">
+                                <div class="skill">
+                                    <div class="skill-text">{{ $skill }}</div>
+                                    <div class="skill-fill" data-fill="{{ $value }}"></div>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-6c8b4ff elementor-widget elementor-widget-text-editor"
+                    data-id="6c8b4ff"  data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <div class="skill-header">Others</div>
+                        <ul class="list-inline">
+                            {{ range sort .Site.Data.resume.index.skills.sub }}
+                            <li class="list-inline-item"><span class="badge badge-light">{{ . }}</span></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-1380b9f8 cocobasic-up-down elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-image">
+                    <div class="elementor-widget-container">
+                        <img decoding="async" width="200" height="200" src="/assets/images/circle.png" class="attachment-full size-full wp-image-527" alt="" loading="lazy" sizes="(max-width: 200px) 100vw, 200px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-696e0f2e cocobasic-column-align"
+            data-id="696e0f2e" data-element_type="column"
+            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-6298d834 cocobasic-left-down-rigt-up elementor-widget__width-initial elementor-absolute elementor-widget elementor-widget-image">
+                    <div class="elementor-widget-container">
+                        <img decoding="async" width="214" height="164" src="/assets/images/triangle.png" class="attachment-full size-full wp-image-526" alt="" loading="lazy" />
+                    </div>
+                </div>
+
+                <div class="elementor-element elementor-element-48629353 elementor-widget elementor-widget-heading">
+                    <div class="elementor-widget-container">
+                        <h2 class="elementor-heading-title elementor-size-default">Skills​</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

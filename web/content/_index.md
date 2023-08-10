@@ -1,3 +1,7 @@
+---
+title: Jin - Virsyne
+---
+
 # Jin's Awesome Site
  
 1. Checkout out my awesome site
