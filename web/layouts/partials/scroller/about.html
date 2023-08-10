@@ -13,7 +13,7 @@
             <div class="elementor-widget-wrap elementor-element-populated">
                 <div class="elementor-element elementor-element-35fa5410 elementor-widget elementor-widget-text-editor">
                     <div class="elementor-widget-container">
-                        <p>{{ .Site.Data.resume.index.summaryHead }}</p>
+                        <div class="sub-header">{{ .Site.Data.resume.index.summaryHead }}</div>
                     </div>
                 </div>
                 
@@ -27,7 +27,7 @@
 
                 <div class="elementor-element elementor-element-53601618 elementor-widget elementor-widget-text-editor">
                     <div class="elementor-widget-container">
-                        <div class="skill-header">Language</div>
+                        <div class="sub-header">Language</div>
                         <ul class="list-unstyled resume-lang-list">
                             {{ range .Site.Data.resume.index.languages }}
                             <li class="mb-2"><span class="resume-lang-name font-weight-bold">{{ .name }}</span> <small class="text-muted font-weight-normal">({{ .level }})</small></li>
