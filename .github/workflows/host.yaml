@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - cloudflare
   pull_request:
 
 env:
@@ -21,7 +20,7 @@ jobs:
 
     permissions:
       contents: read
-      packages: write
+      deployments: write
 
     steps:
       - name: Install Hugo CLI
@@ -42,8 +41,8 @@ jobs:
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ env.CLOUDFLARE_ACCOUNTID }}
-          projectName: Virsyne
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNTID }}
+          projectName: virsyne
           directory: public
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
