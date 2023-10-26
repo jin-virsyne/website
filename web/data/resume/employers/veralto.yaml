@@ -1,0 +1,20 @@
+name: Veralto - Hach Malaysia
+location: Selangor
+startYear: 2023
+roles:
+  Business System Developer:
+    position: Business System Developer
+    start: Oct 2023
+    end: Current
+    blurb: ""
+    achievements: ""
+    bullets:
+      - Supported users of the internal systems in the APAC region, mainly Malaysia, Singapore and Indonesia.
+      - Developed and enhanced new features in the existing systems, enhancing workflow and saving costs.
+      - Collaborated with the China IT team for system developments.
+    technologies: 
+      - ASP.NET Web Form
+      - C#
+      - Windows Form
+      - Microsoft SQL
+
