@@ -7,15 +7,14 @@ roles:
     start: Oct 2023
     end: Current
     blurb: ""
-    achievements: ""
+    achievements: Event Squad member for 2024 | Core committee member for year 2024 off-site meeting
     bullets:
       - Supported users of the internal systems in the APAC region, mainly Malaysia, Singapore and Indonesia.
       - Developed and enhanced new features in the existing systems, enhancing workflow and saving costs.
       - Collaborated with the China IT team for system developments.
     technologies: 
-      - ASP.NET Web Form
+      - ASP.NET
       - C#
-      - Windows Form
       - Microsoft SQL
       - HTML/CSS
       - Telerik
