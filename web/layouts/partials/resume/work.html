@@ -15,12 +15,12 @@
                 <div class="resume-timeline-item-header mb-2">
                     <div class="d-flex flex-column flex-md-row">
                         <h3 class="resume-position-title font-weight-bold mb-1">{{ .position }}</h3>
-                        <div class="resume-position-time ms-auto">{{ .start }} {{ with .end }}- {{ . }} {{ end }}</div>
+                        <div class="resume-position-time ms-auto">{{ .start }} {{ with .end }} - {{ . }} {{ end }}</div>
                     </div><!--//row-->
                 </div><!--//resume-timeline-item-header-->
                 <div class="resume-timeline-item-desc">
                     {{ with .blurb }}<p>{{ . }}</p>{{ end }}
-                    {{ with .achievement }}
+                    {{ with .achievements }}
                     <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
                     <p>{{ . }}</p>
                     {{ end }}

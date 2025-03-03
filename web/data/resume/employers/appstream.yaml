@@ -9,9 +9,9 @@ roles:
     blurb: ""
     achievements: ""
     bullets:
-      - Spearheaded GUI revitalization or implementation for existing and new websites, enhancing user experience.
-      - Designed and developed dynamic frontend web pages.
-      - Solo engineered a property rental management system, encompassing frontend, backend, and database architecture.
+      - Spearheaded the redesign and implementation of GUIs to enhance website usability for an insurance company.
+      - Designed and built dynamic front-end web pages for new and existing platforms, including the company's website.
+      - Independently created a property rental management system, handling full-stack development.
     technologies: 
       - ASP.NET MVC
       - C#

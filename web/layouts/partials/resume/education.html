@@ -6,7 +6,7 @@
             <li class="mb-2">
                 <div class="resume-degree font-weight-bold">{{ .degree }}</div>
                 <div class="resume-degree-org">{{ .school }}</div>
-                <div class="resume-degree-time">{{ .start }} - {{ .end }}</div>
+                <div class="resume-degree-time">{{ .start }} - {{ .end }}{{ with .grade }}: {{ . }}{{ end }}</div>
             </li>
             {{ end }}
         </ul>

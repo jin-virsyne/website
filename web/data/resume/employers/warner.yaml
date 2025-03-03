@@ -9,9 +9,9 @@ roles:
     blurb: ""
     achievements: ""
     bullets:
-      - UI/UX Developer adept at translating system requirements into Sketch software prototypes.
-      - Executed frontend development for APAC region projects, aligning with approved prototypes and backend requirements.
-      - Collaborated within a diverse global team, comprising members from India, Japan, and the US.
+      - Developed and implemented UI/UX designs for in-house APAC region web projects. 
+      - Translated new system requirements into interactive prototypes using Sketch.
+      - Collaborated with cross-functional teams across India, Japan, and the US to meet project goals and timeline. 
     technologies: 
       - Sketch
       - Angular

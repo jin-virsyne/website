@@ -9,9 +9,9 @@ roles:
     blurb: ""
     achievements: ""
     bullets:
-      - Designed GUI and implemented frontend templates for diverse systems and projects.
-      - Executed backend API development and database table implementation.
-      - Contributed to manufacturing & inventory management projects for MyKad (Malaysian Identity Card) and Malaysian Passport.
+      - Designed and implemented front-end templates and GUIs for multiple government and experimental projects.
+      - Developed robust back-end APIs and optimized database structures, handling million rows transactions daily.
+      - A pivotal member in developing the manufacturing and inventory management systems for MyKad (Malaysia Identity Card) and Malaysian Passports, covering end-to-end features in the production line.
     technologies: 
       - ASP.NET Razor
       - Crystal Report

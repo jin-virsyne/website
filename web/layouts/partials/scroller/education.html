@@ -28,7 +28,7 @@
                                     <b>{{ .degree }}</b> <br> 
                                     <div class="timeline-school">
                                         {{ .school }}<br> 
-                                        <span class="timeline-span">{{ .start }} - {{ .end }}</span>
+                                        <span class="timeline-span">{{ .start }} - {{ .end }}{{ with .grade }}: {{ . }}{{ end }}</span>
                                     </div>
                                 </div>
                                 <div class="timeline-event-date">{{ .end }}</div>
